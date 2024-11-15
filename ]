@@ -1,0 +1,39 @@
+import { IconBrandJavascript, IconBrandNextjs, IconBrandNodejs, IconBrandPython, IconBrandReact, IconBrandTailwind, IconBrandTypescript } from "@tabler/icons-react"
+import { SectionHeader } from "../section-header/SectionHeader"
+import { IconExpress } from "../icons/express"
+import IconPostgres from "../icons/postgres"
+import { IconNode } from "../icons/node"
+export const AboutSection = () => {
+	return (
+		<div>
+			<SectionHeader />
+			<div className="text-sm text-foregroundMute">
+				I am <span className="text-foreground" >full-stack</span> web developer from Nepal with over <span className="text-foreground">two years</span> of experience and a bachelor’s degree in <span className="text-foreground">Computer Engineering</span> from Tribhuvan University. Over the past year, I’ve had the chance to dive into a mix of projects, building and fine-tuning web apps from top to bottom—whether it’s crafting the user interface or making sure everything runs smoothly behind the scenes.
+			</div>
+			<div className="text-sm text-foreground mt-2">
+				<div>
+					Technologies that I use
+				</div>
+				<h2 className="mt-2">Language</h2>
+				<div className="flex gap-4 text-foregroundMute mt-1">
+					<IconBrandTypescript size={32} />
+					<IconBrandJavascript size={32} />
+					<IconBrandPython size={32} />
+				</div>
+				<div className="mt-2">Frontend</div>
+				<div className="flex gap-4 text-foregroundMute mt-1">
+					<IconBrandReact size={32} />
+					<IconBrandTailwind size={32} />
+					<IconBrandNextjs size={32} />
+				</div>
+				<div className="mt-2">Server</div>
+				<div className="flex gap-4 text-foregroundMute mt-1">
+					<IconExpress width={32} height={32} className="fill-foregroundMute" />
+					<IconPostgres width={32} height={32} className="fill-foregroundMute" />
+					<IconNode width={32} height={32} className="fill-foregroundMute" />
+					<IconBrandNodejs size={32} />
+				</div>
+			</div>
+		</div>
+	)
+}

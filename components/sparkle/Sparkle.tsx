@@ -2,7 +2,7 @@ import "./spark.css"
 export const Spark = () => {
 	return (
 		<svg width="50" height="50" viewBox="0 0 100 100">
-			<g className="group" opacity="0.8">
+			<g className="ggs" opacity="0.8">
 				<g className="large">
 					<path
 						className="spark-path"

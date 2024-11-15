@@ -15,14 +15,18 @@ export const AvatarHolder = () => {
 
 	return (
 
-		<div className="relative w-[100px] cursor-pointer" onMouseEnter={() => setShowSpark(true)} >
+		<div className="relative w-[100px] ">
 			<div className={`${showSpark ? "block" : "hidden"} absolute bottom-[-12px] right-[35px]`}>
+
 				<Spark />
 			</div>
 			<Image
+				onMouseEnter={() => {
+					setShowSpark(true)
+				}}
 				src="/avatar.png"
 				width={100}
-				className="-ml-6 -mb-4"
+				className="-ml-6 -mb-4 cursor-pointer"
 				height={100}
 				alt="avatar"
 			/>

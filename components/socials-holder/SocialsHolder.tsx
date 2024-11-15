@@ -1,12 +1,12 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr"
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react"
 
 export const SocialHolder = () => {
 	return (
 
-		<div className="flex gap-4 mt-8">
-			<GithubLogo size={24} />
-			<LinkedinLogo size={24} />
-			<InstagramLogo size={24} />
+		<div className="text-foregroundMute flex gap-4 mt-8">
+			<IconBrandGithub size={32} />
+			<IconBrandLinkedin size={32} />
+			<IconBrandInstagram size={32} />
 		</div>
 	)
 }

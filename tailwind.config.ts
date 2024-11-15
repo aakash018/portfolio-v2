@@ -19,7 +19,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         foregroundMute: "#a7aabd",
-        highlight: "#005a78"
+        highlight: "#54D2C1"
       },
       fontFamily: {
         lato: ["var(--font-lato)"]
