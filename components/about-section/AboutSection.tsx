@@ -12,12 +12,12 @@ import { IconVite } from "../icons/vite"
 import { IconNext } from "../icons/nextjs"
 export const AboutSection = () => {
 	return (
-		<div>
+		<div id="about" className="lg:px-4">
 			<SectionHeader title="About" />
-			<div className="text-sm text-foregroundMute">
+			<div className="text-md text-foregroundMute lg:leading-[26px]">
 				I am <span className="text-foreground font-semibold" >full-stack</span> web developer from Nepal with over <span className="text-foreground font-semibold">two years</span> of experience and a bachelor’s degree in <span className="text-foreground font-semibold">Computer Engineering </span> from Tribhuvan University. Over the past year, I’ve had the chance to dive into a mix of projects, building and fine-tuning web apps from top to bottom—whether it’s crafting the user interface or making sure everything runs smoothly behind the scenes. </div>
 			<div className="text-sm text-foreground mt-4">
-				<div className="text-sm font-bold">
+				<div className="uppercase text-sm font-bold">
 					Technologies that I love
 				</div>
 				<h2 className="mt-4">Language</h2>

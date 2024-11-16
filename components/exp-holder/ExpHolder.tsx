@@ -1,17 +1,33 @@
+"use client"
 import { Tags } from "../tags/Tags"
+import { WorkTitle } from "../work-title/WorkTitle"
 
-export const ExpHolder = () => {
+interface Props {
+	date: string,
+	title: string,
+	description: string,
+	tech: string[]
+	compLink: string
+	id: string
+}
+
+export const ExpHolder = ({ id, compLink, date, title, description, tech }: Props) => {
+	const handleOnclick = () => {
+		window.open(compLink, "_blank")
+	}
 	return (
-		<div>
-			<section className="text-sm text-foregroundMute">2018 - 2019</section>
-			<section className="font-bold hover:text-highlight cursor-pointer">Lead Engineer · Upstatement</section>
-			<section className="text-sm text-foregroundMute mt-2">Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.</section>
-			<div className="mt-2 flex flex-wrap gap-2">
-				<Tags content="Typescript" />
-				<Tags content="Nextjs" />
-				<Tags content="Tailwind" />
-				<Tags content="Postgres" />
-				<Tags content="Drizzle" />
+		<div id={id} onClick={handleOnclick} className="md:flex lg:px-4 lg:hover:!opacity-100 group-hover/list:opacity-40 transition-all lg:py-4 lg:hover:bg-[#0e1b3860] lg:hover:shadow lg:hover:shadow-[#1d315c] cursor-pointer group rounded-md" >
+			<section className="md:flex-1 text-vsm uppercase text-foregroundMute">{date}</section>
+			<div className="md:w-[70%]" >
+				<WorkTitle title={title} />
+				<section className="text-sm text-foregroundMute mt-2">{description}</section>
+				<div className="mt-2 flex flex-wrap gap-2">
+					{
+						tech.map((th, i) => (
+							<Tags key={i} content={th} />
+						))
+					}
+				</div>
 			</div>
 		</div>
 	)
