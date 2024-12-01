@@ -1,19 +1,13 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export const GlowBall = () => {
-	const [position, setPosition] = useState({
-		x: 0,
-		y: 0
-	})
+	const divRef = useRef<HTMLDivElement>(null)
 	const handleMouseMove = (event: MouseEvent) => {
-		console.log(event.clientX, event.clientY, event.pageX, event.pageY)
-		setPosition({
-			x: event.pageX,
-			y: event.pageY,
-		});
+		if (!divRef.current) return
+		console.log("we are here")
+		divRef.current!.style.background = `radial-gradient(600px at ${event.clientX}px ${event.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`
 	};
-
 	useEffect(() => {
 		// Add event listener to track mouse movement globally
 		window.addEventListener("mousemove", handleMouseMove);
@@ -24,13 +18,6 @@ export const GlowBall = () => {
 		};
 	}, [])
 	return (
-		<div style={{
-			position: "absolute",
-			top: position.y,
-			left: position.x, background: 'radial-gradient(circle, #2563eb50, transparent)',
-		}} className="opacity-50 pointer-events-none translate-x-[-50%] translate-y-[-50%] z-[-1] absolute w-[500px] h-[500px] " >
-
-
-		</div>
+		<div ref={divRef} className="w-full h-full pointer-events-none z-[1] fixed top-0 left-0 hidden lg:block" />
 	)
 }
