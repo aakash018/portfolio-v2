@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 
 export const GlowBall = () => {
 	const divRef = useRef<HTMLDivElement>(null)
