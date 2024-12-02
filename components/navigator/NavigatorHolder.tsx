@@ -12,10 +12,13 @@ export const NavigatorHolder = ({ title, activateOn }: Props) => {
 
 	useEffect(() => {
 		const handleScroll = () => {
+			console.log("asdadasdadsads here")
 			const div = document.getElementById(activateOn);
 			if (!div) return
 			const rect = div.getBoundingClientRect();
-			const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+			console.log(rect, activateOn)
+			//const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+			const isInView = rect.top <= 200 && rect.top >= -200;
 
 			setIsActive(isInView);
 		};
@@ -31,8 +34,8 @@ export const NavigatorHolder = ({ title, activateOn }: Props) => {
 
 			<div className="flex gap-4 items-center group cursor-pointer">
 				<div className={`${isActive ? "!bg-foreground !w-14" : ""} w-6 h-[1px] bg-foregroundMute group-hover:w-14 group-hover:bg-foreground transition-all`}></div>
-				<div className="text-vsm uppercase tracking-wider text-foregroundMute group-hover:text-foreground" >{title}</div>
+				<div className={`text-vsm uppercase tracking-wider text-foregroundMute ${isActive ? "!text-foreground font-semibold" : ""} group-hover:text-foreground`} >{title}</div>
 			</div>
-		</a>
+		</a >
 	)
 }
