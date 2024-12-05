@@ -11,7 +11,6 @@ import { IconTailwind } from "../icons/tailwind"
 import { IconVite } from "../icons/vite"
 import { IconNext } from "../icons/nextjs"
 import Image from "next/image"
-import { WorkTitle } from "../work-title/WorkTitle"
 import { CVLink } from "./CVLink"
 export const AboutSection = () => {
 	return (
