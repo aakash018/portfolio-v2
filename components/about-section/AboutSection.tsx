@@ -11,6 +11,8 @@ import { IconTailwind } from "../icons/tailwind"
 import { IconVite } from "../icons/vite"
 import { IconNext } from "../icons/nextjs"
 import Image from "next/image"
+import { WorkTitle } from "../work-title/WorkTitle"
+import { CVLink } from "./CVLink"
 export const AboutSection = () => {
 	return (
 		<div id="about" className="lg:px-4">
@@ -59,7 +61,9 @@ export const AboutSection = () => {
 					<IconButton tooltipContent="Nest" icon={<Image src={"/nest.svg"} alt="nest" width={32} height={32} />} />
 					<IconButton tooltipContent="Drizzle" icon={<Image src={"/drizzle.svg"} alt="drizzle" width={32} height={32} />} />
 				</div>
+
 			</div>
+			<CVLink />
 		</div>
 	)
 }
